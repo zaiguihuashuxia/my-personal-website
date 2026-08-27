@@ -21,12 +21,14 @@
 
 ## 线上发布验收
 
-2026-08-27 已完成 GitHub Pages 的首次生产发布和完整作者流程验收：
+2026-08-27 已完成 GitHub Pages 的首次生产发布、完整作者流程验收，以及从项目站点到用户站点的迁移：
 
-- 仓库：<https://github.com/zaiguihuashuxia/my-personal-website>
-- 生产站点：<https://zaiguihuashuxia.github.io/my-personal-website/>
-- 首次发布提交：`f68d0de2ddf33866182c86bea183825fd9bba8fa`
-- 验收工作流：<https://github.com/zaiguihuashuxia/my-personal-website/actions/runs/33056160388>
+- 当前仓库：<https://github.com/zaiguihuashuxia/zaiguihuashuxia.github.io>
+- 生产站点：<https://zaiguihuashuxia.github.io/>
+- 旧仓库（迁移记录，不再作为生产发布源）：<https://github.com/zaiguihuashuxia/my-personal-website>
+- 首次项目站点发布提交：`f68d0de2ddf33866182c86bea183825fd9bba8fa`
+- 用户站点迁移基线提交：`2beffd15190d7a93d20bfd9dfebe515d0c37726a`
+- 当前发布工作流：<https://github.com/zaiguihuashuxia/zaiguihuashuxia.github.io/actions/workflows/site.yml>
 - GitHub Pages source 已设为 GitHub Actions；重新运行后，`build` 与 `deploy` job 均成功，线上 artifact 来自与本地 `scripts/site.py check` 相同的生产构建目录。
 - 首页可访问，并展示知识库目的、Java 入口和分层导航。
 - 固定链接 `/programming/java/fundamentals/dev-java-learn/` 可直接打开；页面包含面包屑、左侧模块导航、右侧目录与来源链接。
