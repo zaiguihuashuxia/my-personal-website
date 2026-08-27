@@ -12,11 +12,11 @@
 
 ## 3. User-site deployment
 
-- [ ] 3.1 Set the target repository's GitHub Pages source to GitHub Actions and trigger the `main` deployment; verify the build and deploy jobs complete successfully.
-- [ ] 3.2 Confirm the deployment reports `https://zaiguihuashuxia.github.io/` as its Pages URL and verify the root request returns the knowledge-library homepage rather than 404.
+- [x] 3.1 Set the target repository's GitHub Pages source to GitHub Actions and trigger the `main` deployment; verify the build and deploy jobs complete successfully.
+- [x] 3.2 Confirm the deployment reports `https://zaiguihuashuxia.github.io/` as its Pages URL and verify the root request returns the knowledge-library homepage rather than 404.
 
 ## 4. Post-cutover validation and documentation
 
-- [ ] 4.1 Verify from the root-domain deployment that a representative article, its static assets, and generated search open successfully with no `/my-personal-website/` prefix.
+- [x] 4.1 Verify from the root-domain deployment that a representative article, its static assets, and generated search open successfully with no `/my-personal-website/` prefix.
 - [x] 4.2 Update repository-facing operational and acceptance documentation to identify the root-domain URL and new canonical repository; verify no production instructions still direct authors to the legacy repository.
-- [ ] 4.3 Retain `my-personal-website` as a non-production reference, review the final remote configuration and public URLs, and verify the migration rollback information remains usable.
+- [x] 4.3 Retain `my-personal-website` as a non-production reference, review the final remote configuration and public URLs, and verify the migration rollback information remains usable.
