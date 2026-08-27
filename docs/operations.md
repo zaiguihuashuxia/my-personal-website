@@ -33,7 +33,14 @@ uv run python scripts/site.py check
 
 `.github/workflows/site.yml` 在 pull request 上执行完整检查，在 `main` 分支 push 上额外上传 `site/` 并通过 GitHub Pages 部署。部署 job 依赖 build job，因此验证失败时不会覆盖上一次成功站点。
 
+- 规范源码仓库：<https://github.com/zaiguihuashuxia/notes>
+- 生产站点：<https://zaiguihuashuxia.github.io/notes/>
+- 本地知识站检出的 `origin` 和 `main` 上游都应指向 `zaiguihuashuxia/notes`。
+- 个人主页仓库通过单独检出维护；如需在本检出中引用，其 remote 名称使用 `homepage-origin`，不得作为 `main` 的上游。
+
 首次启用时，需要在 GitHub 仓库的 Pages 设置中把 Source 设为 **GitHub Actions**。如果未来改用其他托管平台，只需上传同一个 `site/` 静态目录。
+
+仓库已从 `my-personal-website` 改名为 `notes`。旧项目 Pages 地址不属于兼容入口，站点内容、生成元数据和受控文档不得依赖它自动重定向。
 
 ## 添加文章
 
@@ -51,3 +58,4 @@ uv run python scripts/site.py check
 - 内容错误：revert 对应提交并推送，工作流会重新生成上一版本内容。
 - 构建工具错误：恢复上一个可用依赖锁和构建脚本后重新运行工作流。
 - 紧急情况：在 GitHub Pages 环境中重新运行最后一次成功部署，或把最后一次成功的 `site/` artifact 上传到任意静态托管。
+- 仓库改名导致 `/notes/` 无法健康部署时：在根个人主页切换前把 `notes` 改回 `my-personal-website`，恢复 MkDocs `site_url` 和本地 remote；不要改写 Git 历史。

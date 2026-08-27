@@ -1,5 +1,6 @@
 site_name: 个人知识书库
 site_description: 持续整理、复习和输出自己的知识
+site_url: https://zaiguihuashuxia.github.io/notes/
 use_directory_urls: true
 
 theme:

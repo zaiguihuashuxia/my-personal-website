@@ -1,13 +1,13 @@
 ## 1. 建立迁移基线
 
 - [x] 1.1 在当前知识站点检出中运行 `uv run python scripts/site.py check`，检查分支、工作区、远程仓库和两个线上地址；确认本地构建通过，并记录根地址与旧 `/my-personal-website/` 项目地址当前仍发布同一知识站点的基线结果。
-- [ ] 1.2 将本变更的 OpenSpec 规划文件提交到 `main`，并以非强制推送方式把同一提交同步到 `zaiguihuashuxia/my-personal-website`；确认项目仓库的 `main` 保留既有历史并包含完整规划文件。
+- [x] 1.2 将本变更的 OpenSpec 规划文件提交到 `main`，并以非强制推送方式把同一提交同步到 `zaiguihuashuxia/my-personal-website`；确认项目仓库的 `main` 保留既有历史并包含完整规划文件。
 
 ## 2. 重命名并恢复知识站点仓库边界
 
-- [ ] 2.1 在 GitHub 上将 `zaiguihuashuxia/my-personal-website` 原地重命名为 `zaiguihuashuxia/notes`，不新建空仓库且不重写历史；确认新仓库地址可访问、默认分支仍为 `main`，并验证重命名前的规划提交与既有提交历史完整保留。
-- [ ] 2.2 调整当前检出的 Git 远程：让 `origin` 指向 `zaiguihuashuxia/notes`，让 `homepage-origin` 指向 `zaiguihuashuxia/zaiguihuashuxia.github.io`，并让本地 `main` 跟踪 `origin/main`；分别验证 fetch URL、push URL 和上游分支，不依赖旧仓库地址的 Git 重定向。
-- [ ] 2.3 在知识站点中把 MkDocs 生产 `site_url` 设置为 `https://zaiguihuashuxia.github.io/notes/`，同步更新仓库描述、README、相关运维与验收文档中的仓库名和正式地址；运行完整 `uv run python scripts/site.py check`，并确认 canonical 元数据和 sitemap 使用 `/notes/` 地址。
+- [x] 2.1 在 GitHub 上将 `zaiguihuashuxia/my-personal-website` 原地重命名为 `zaiguihuashuxia/notes`，不新建空仓库且不重写历史；确认新仓库地址可访问、默认分支仍为 `main`，并验证重命名前的规划提交与既有提交历史完整保留。
+- [x] 2.2 调整当前检出的 Git 远程：让 `origin` 指向 `zaiguihuashuxia/notes`，让 `homepage-origin` 指向 `zaiguihuashuxia/zaiguihuashuxia.github.io`，并让本地 `main` 跟踪 `origin/main`；分别验证 fetch URL、push URL 和上游分支，不依赖旧仓库地址的 Git 重定向。
+- [x] 2.3 在知识站点中把 MkDocs 生产 `site_url` 设置为 `https://zaiguihuashuxia.github.io/notes/`，同步更新仓库描述、README、相关运维与验收文档中的仓库名和正式地址；运行完整 `uv run python scripts/site.py check`，并确认 canonical 元数据和 sitemap 使用 `/notes/` 地址。
 - [ ] 2.4 提交并推送知识站点变更到 `notes`，确认该仓库的 GitHub Actions 构建与 Pages 部署成功；验证 `/notes/`、一个代表性文章地址、静态资源和搜索功能均可正常访问，然后才能开始替换根站点内容。
 
 ## 3. 建立独立个人主页

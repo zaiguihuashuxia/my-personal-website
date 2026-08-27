@@ -101,6 +101,11 @@ class SiteToolTests(unittest.TestCase):
         self.assertIn("path: site", text)
         self.assertIn("actions/deploy-pages@v4", text)
 
+    def test_mkdocs_uses_notes_production_url(self) -> None:
+        config = Path(__file__).resolve().parents[1] / "mkdocs.yml"
+        text = config.read_text(encoding="utf-8")
+        self.assertIn("site_url: https://zaiguihuashuxia.github.io/notes/", text)
+
     def test_concept_template_renders_supported_structure(self) -> None:
         template = Path(__file__).resolve().parents[1] / "templates" / "concept-note.md"
         document = read_document(template, template.parent)
