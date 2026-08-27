@@ -43,4 +43,15 @@
 - 改名前保全规划与历史的提交：`ba2a2f2f332b7eec198b0ef5aa2fbeb8859ac9da`
 - `mkdocs.yml`、canonical 元数据和 sitemap 必须使用 `/notes/`。
 - `/notes/` 的 Actions 部署及代表性页面验收完成前，根用户站点不得替换为个人主页。
-- 最终知识站部署 SHA、根主页部署 SHA 和双站线上验收结果在对应发布成功后补充到本节。
+
+2026-08-27 已完成双站分离验收：
+
+- 知识站切换提交：`33018c25a66981396a76e0ac5370a26ab54b03fe`；`Knowledge site` workflow run `33075788540` 的 `build` 与 `deploy` 均成功。
+- 根主页切换提交：`62cbbd7f6ef515da3445d67c150c0c1b211999b0`；`Personal homepage` workflow run `33076575015` 的 `deploy` 成功。
+- 根地址返回 200，标题为“Wu Qi · 个人主页”，并提供 `/notes/` 与 GitHub 入口。
+- `/notes/` 返回 200，标题为“个人知识书库”，代表文章、样式资源和搜索索引均返回 200；浏览器搜索 `dev.java` 返回 2 个匹配结果。
+- 根主页 HTML 与知识站 HTML 的 SHA-256 不同，两个工作流分别只上传 `public/` 与 `site/`，部署产物边界独立。
+- 已退役的 `/my-personal-website/` Pages 地址在最终验收时返回 404，受控站点和文档不将它作为兼容入口。
+- 本地知识站检出的 `origin/main` 指向 `zaiguihuashuxia/notes`；独立主页检出的 `origin/main` 指向 `zaiguihuashuxia/zaiguihuashuxia.github.io`。
+- 根站替换前提交 `83b6b52af22fb64c813d646f23946a322838682a` 保留在用户站点历史中；可以通过 revert 恢复，不需要重写历史。
+- 后续 OpenSpec 归档应先对 `migrate-github-pages-user-site` 跳过规格同步，再正常归档 `separate-homepage-and-knowledge-site`，避免把“知识库占用根地址”的中间要求合入主规格。
