@@ -38,12 +38,12 @@
 ## 6. Continuous Integration and Publication
 
 - [x] 6.1 Add continuous integration that installs pinned dependencies and runs metadata, link, asset, privacy-boundary, search, and production-build checks, and verify an intentionally broken fixture prevents the workflow from reaching deployment.
-- [ ] 6.2 Add the preferred GitHub Pages deployment workflow while keeping the generated static directory provider-neutral, and verify a successful publication-branch run deploys the same artifact produced by local production validation.
+- [x] 6.2 Add the preferred GitHub Pages deployment workflow while keeping the generated static directory provider-neutral, and verify a successful publication-branch run deploys the same artifact produced by local production validation.
 - [x] 6.3 Ensure failed validation or generation cannot replace the last successful site, and verify the deployment job is skipped when its validation dependency fails.
 - [x] 6.4 Inspect the final static artifact for allowed source, asset, and search content, and verify it contains no private paths, draft names, Obsidian workspace data, or local-only test tokens.
 
 ## 7. End-to-End Acceptance and Handoff
 
-- [ ] 7.1 Run the complete author flow from promoting a standard Markdown note through local preview, commit-triggered validation, and static deployment, and verify the published page is navigable and searchable at its stable URL.
+- [x] 7.1 Run the complete author flow from promoting a standard Markdown note through local preview, commit-triggered validation, and static deployment, and verify the published page is navigable and searchable at its stable URL.
 - [x] 7.2 Run the reader flow across the home knowledge map, Java module navigation, ordered and standalone pages, review links, search, themes, and mobile layout, and record that every scenario in the four delta specs passes.
 - [x] 7.3 Document ongoing content addition, public-asset handling, local preview, validation, publication, and rollback, and verify a new article can be added by following the documentation without editing application code.
