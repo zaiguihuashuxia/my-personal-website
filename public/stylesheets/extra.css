@@ -1,0 +1,22 @@
+:root {
+  --knowledge-card-border: color-mix(in srgb, var(--md-primary-fg-color) 22%, transparent);
+}
+
+.md-typeset .grid.cards > ul > li {
+  border-color: var(--knowledge-card-border);
+}
+
+.md-typeset table:not([class]) {
+  display: table;
+  width: 100%;
+}
+
+.md-content__inner {
+  padding-bottom: 3rem;
+}
+
+@media screen and (max-width: 44.984375em) {
+  .md-typeset h1 {
+    font-size: 1.8rem;
+  }
+}

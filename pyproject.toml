@@ -1,0 +1,14 @@
+[project]
+name = "personal-knowledge-library"
+version = "0.1.0"
+description = "A public, Markdown-first personal knowledge library"
+requires-python = ">=3.9"
+dependencies = [
+  "jieba==0.42.1",
+  "mkdocs==1.6.1",
+  "mkdocs-material==9.7.7",
+  "pyyaml==6.0.3",
+]
+
+[tool.uv]
+package = false

@@ -1,0 +1,13 @@
+.DS_Store
+.generated/
+.venv/
+__pycache__/
+*.py[cod]
+site/
+
+# The repository is the public publication boundary. Local-only material must
+# never be tracked or scanned by the site builder.
+.obsidian/
+drafts/
+private/
+private-assets/
