@@ -5,6 +5,12 @@ __pycache__/
 *.py[cod]
 site/
 
+# Local project-management context is intentionally excluded from the public
+# repository while remaining available in this working copy.
+/.agents/
+/openspec/
+/docs/
+
 # The repository is the public publication boundary. Local-only material must
 # never be tracked or scanned by the site builder.
 .obsidian/

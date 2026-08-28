@@ -20,4 +20,6 @@ uv run python scripts/site.py serve
 uv run python scripts/site.py check
 ```
 
-生成的静态产物位于 `site/`。详细写作和发布方法见 [`docs/authoring.md`](docs/authoring.md) 与 [`docs/operations.md`](docs/operations.md)。
+生成的静态产物位于 `site/`，该目录由构建流程生成且不提交 Git。
+
+新增公开笔记时，使用 `templates/` 中的结构作为参考，把确认可以公开的标准 Markdown 和附件放入 `public/`，运行完整检查与本地预览后再提交并推送。`main` 分支的有效提交会由 GitHub Actions 自动部署到公开站点。
